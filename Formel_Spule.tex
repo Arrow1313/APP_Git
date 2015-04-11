@@ -1,0 +1,18 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\begin{document}
+\begin{align*}
+\textbf{B}(r) = \frac{\mu_0j}{4\pi}\int_{-b/2}^{b/2}\int_{0}^{2\pi}\int_{R}^{R+\Delta R} \frac{\begin{pmatrix}
+\cos(\phi z) \\
+\sin(\phi z) \\
+r-(y\sin(\phi)+x\cos(\phi))
+\end{pmatrix}r dr d\phi dz}{\sqrt{(x-r\cos(\phi))^2+(y-r\sin(\phi))^2+z^2}^3}
+\end{align*}
+$\Delta$ R = Dicke der Spule \\
+b = Breite der Spule
+
+\end{document}
