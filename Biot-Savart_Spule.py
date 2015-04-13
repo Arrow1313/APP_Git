@@ -7,13 +7,13 @@ import math
 
 #Integrale
 def fnx(r,p,w,x,y,z,j,m):
-	return ((j*m*r / (4*math.pi)) * (np.cos(p)*(-y-w)) / ( ( ((x)-r * np.cos(p))**2 +((z)-r*np.sin(p))**2 + (-y-w)**2 )**(1.5) ))
+	return ((j*m*r / (4*math.pi)) * (np.cos(p)*(y-w)) / ( ( ((x)-r * np.cos(p))**2 +((-z)-r*np.sin(p))**2 + (y-w)**2 )**(1.5) ))
 
 def fnz(r,p,w,x,y,z,j,m):
-	return ((j*m*r / (4*math.pi)) *(-1)* (np.sin(p)*(-y-w)) / ( ( ((x)-r * np.cos(p))**2 +((z)-r*np.sin(p))**2 + (-y-w)**2 )**(1.5) ))
+	return ((j*m*r / (4*math.pi)) *(-1)* (np.sin(p)*(y-w)) / ( ( ((x)-r * np.cos(p))**2 +((-z)-r*np.sin(p))**2 + (y-w)**2 )**(1.5) ))
 
 def fny(r,p,w,x,y,z,j,m):
-	return ((j*m*r / (4*math.pi)) * (r-(((z)*np.sin(p))+((x)*np.cos(p)))) / ( ( ((x)-r * np.cos(p))**2 +((z)-r*np.sin(p))**2 + (-y-w)**2 )**(1.5) ))
+	return ((j*m*r / (4*math.pi)) * (r-(((-z)*np.sin(p))+((x)*np.cos(p)))) / ( ( ((x)-r * np.cos(p))**2 +((-z)-r*np.sin(p))**2 + (y-w)**2 )**(1.5) ))
 
 
 #Koordinaten

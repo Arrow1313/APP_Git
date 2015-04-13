@@ -1,7 +1,7 @@
 set terminal wxt 0 persist
-set yrange[-0.6:0.6]
-set xrange[-0.6:0.6]
-set zrange[-0.6:0.6]
+set yrange[-0.2:0.2]
+set xrange[-0.2:0.2]
+set zrange[-0.2:0.2]
 set view 70,55
 set xlabel "x" #achsenbeschriftung
 set ylabel "y"
@@ -46,8 +46,8 @@ set palette defined ( 0 '#000090',\
                       6 '#ff7000',\
                       7 '#ee0000',\
                       8 '#7f0000')
-splot 'APP1_1test.txt' using 1:2:3:(0.075*$4):(0.075*$5):(0.075*$6):7 with vectors filled lc palette title 'VecSpule'
-set terminal postscript eps enhanced color font 'Helvetica,14' #ausgabeformat
-set output "Beispiel.eps" #name des dokuments
-replot #dokument plotten
-!epstopdf Beispiel.eps #eps in pdf umwandeln
+splot 'datafile2.txt' using 1:2:3:(0.05*$4):(0.05*$5):(0.05*$6):7 with vectors filled lc palette title 'VecSpule'
+#set terminal postscript eps enhanced color font 'Helvetica,14' #ausgabeformat
+#set output "Beispiel.eps" #name des dokuments
+#replot #dokument plotten
+#!epstopdf Beispiel.eps #eps in pdf umwandeln

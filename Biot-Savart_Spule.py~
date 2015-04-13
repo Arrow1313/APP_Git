@@ -7,13 +7,13 @@ import math
 
 #Integrale
 def fnx(r,p,w,x,y,z,j,m):
-	return ((j*m*r / (4*math.pi)) * (np.cos(p)*(-y-w)) / ( ( ((x)-r * np.cos(p))**2 +((z)-r*np.sin(p))**2 + (-y-w)**2 )**(1.5) ))
+	return ((j*m*r / (4*math.pi)) * (np.cos(p)*(y-w)) / ( ( ((x)-r * np.cos(p))**2 +((-z)-r*np.sin(p))**2 + (y-w)**2 )**(1.5) ))
 
 def fnz(r,p,w,x,y,z,j,m):
-	return ((j*m*r / (4*math.pi)) *(-1)* (np.sin(p)*(-y-w)) / ( ( ((x)-r * np.cos(p))**2 +((z)-r*np.sin(p))**2 + (-y-w)**2 )**(1.5) ))
+	return ((j*m*r / (4*math.pi)) *(-1)* (np.sin(p)*(y-w)) / ( ( ((x)-r * np.cos(p))**2 +((-z)-r*np.sin(p))**2 + (y-w)**2 )**(1.5) ))
 
 def fny(r,p,w,x,y,z,j,m):
-	return ((j*m*r / (4*math.pi)) * (r-(((z)*np.sin(p))+((x)*np.cos(p)))) / ( ( ((x)-r * np.cos(p))**2 +((z)-r*np.sin(p))**2 + (-y-w)**2 )**(1.5) ))
+	return ((j*m*r / (4*math.pi)) * (r-(((-z)*np.sin(p))+((x)*np.cos(p)))) / ( ( ((x)-r * np.cos(p))**2 +((-z)-r*np.sin(p))**2 + (y-w)**2 )**(1.5) ))
 
 
 #Koordinaten
@@ -47,7 +47,7 @@ for s in range(-5, 6):
 		y=t/25
 		for u in range(-5, 6):
 			z=u/25
-			print((s+10)*441+(t+10)*21+(u+10))
+			print((s+5)*11*11+(t+5)*11+(u+5))
 			Ix=tplquad(fnx, aw, bw, lambda w: ap, lambda w: bp, lambda w,p: ar, lambda w,p: br, args=(x, y, z, j, m))
 			Iy=tplquad(fny, aw, bw, lambda w: ap, lambda w: bp, lambda w,p: ar, lambda w,p: br, args=(x, y, z, j, m))
 			Iz=tplquad(fnz, aw, bw, lambda w: ap, lambda w: bp, lambda w,p: ar, lambda w,p: br, args=(x, y, z, j, m))
