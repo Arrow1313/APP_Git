@@ -1,0 +1,53 @@
+set terminal wxt 0 persist
+set yrange[-0.6:0.6]
+set xrange[-0.6:0.6]
+set zrange[-0.6:0.6]
+set view 70,55
+set xlabel "x" #achsenbeschriftung
+set ylabel "y"
+set zlabel "z"
+#set mxtics 5 #nicht beschriftete striche an den achsen
+#set mytics 5
+#set ytics 1 #beschriftete striche an den achsen
+#set xtics 1
+
+#set key left top #position der legende
+
+#set style fill solid border 3 #fillstyle für z.b. ein histogramm
+#binwidth=0.08 #breite der bins beim histogramm
+#set boxwidth 0.5*binwidth absolute #breite der säulen im vergleich zu den bins
+#bin(x,width)=width*floor(x/width) + binwidth/2.0 #funktion für bins
+#plot "Beispiel.dat" u (bin($1,binwidth)):(1.0) notitle smooth freq with boxes #histogramm plotten
+
+#set grid y #horizontales gitter
+#set grid x #vertikales gitter
+
+#set sample 10000 #bessere auflösung
+
+#f(x) = m*x+b #funktionen definieren
+#fit f(x) "Beispiel.dat" using 1:2:4 via m,b #funktionen fitten
+#plot "Beispiel.dat" with xyerrorbars title "Messdaten", f(x) title "Regressionsgerade", "Beispiel2.dat" smooth csplines title "Messdaten mit csplines" #plotten von messdaten, regression, und csplines
+
+#set terminal postscript eps enhanced color font 'Helvetica,14' #ausgabeformat
+#set output "Beispiel.eps" #name des dokuments
+#replot #dokument plotten
+#!epstopdf Beispiel.eps #eps in pdf umwandeln
+
+
+#A(x) = 2*(0.5+atan(x)/pi) #eingeschränkte funktion
+#f(x) = A(a)*cos(x)+c #amplitude beschränken
+
+set palette defined ( 0 '#000090',\
+                      1 '#000fff',\
+                      2 '#0090ff',\
+                      3 '#0fffee',\
+                      4 '#90ff70',\
+                      5 '#ffee00',\
+                      6 '#ff7000',\
+                      7 '#ee0000',\
+                      8 '#7f0000')
+splot 'APP1_1test.txt' using 1:2:3:(0.075*$4):(0.075*$5):(0.075*$6):7 with vectors filled lc palette title 'VecSpule'
+set terminal postscript eps enhanced color font 'Helvetica,14' #ausgabeformat
+set output "Beispiel.eps" #name des dokuments
+replot #dokument plotten
+!epstopdf Beispiel.eps #eps in pdf umwandeln

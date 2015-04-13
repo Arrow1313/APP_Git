@@ -47,7 +47,7 @@ for s in range(-5, 6):
 		y=t/25
 		for u in range(-5, 6):
 			z=u/25
-			print((s+5)*11*11+(t+5)*11+(u+5))
+			print((s+10)*441+(t+10)*21+(u+10))
 			Ix=tplquad(fnx, aw, bw, lambda w: ap, lambda w: bp, lambda w,p: ar, lambda w,p: br, args=(x, y, z, j, m))
 			Iy=tplquad(fny, aw, bw, lambda w: ap, lambda w: bp, lambda w,p: ar, lambda w,p: br, args=(x, y, z, j, m))
 			Iz=tplquad(fnz, aw, bw, lambda w: ap, lambda w: bp, lambda w,p: ar, lambda w,p: br, args=(x, y, z, j, m))
