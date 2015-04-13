@@ -28,7 +28,7 @@ set palette defined ( 0 '#000090',\
                       6 '#ff7000',\
                       7 '#ee0000',\
                       8 '#7f0000')
-plot 'datafile2.txt' using 1:2:(0.01*$4):(0.01*$5):7 with vectors filled lc palette
+plot 'datafile1.txt' using 1:2:(0.01*$4):(-0.01*$5):7 with vectors filled lc palette
 
 #set terminal postscript eps enhanced color font 'Helvetica,14' #ausgabeformat
 #set output "Beispiel.
