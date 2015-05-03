@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\begin{document}
+\section{Theorie}
+\subsection{Magnetfeld eines Helmholtzspulenpaares}
+Um das Magnetfeld einer Spule zu simulieren wird das Biot-Savart Gesetz benutzt:
+\begin{align}
+\textbf{B}(\textbf{r}) = \frac{\mu_0}{4\pi}\int_{V} d^3r' \cdot \textbf{j}(\textbf{r}) \times \frac{\textbf{r}-\textbf{r}'}{|\textbf{r}-\textbf{r}'|^3}
+\end{align}
+Da eine Zylindrische Spule verwendet wird, ist es sinnvoll das Integral in Zylinderkoordinaten auszurechnen.
+Angenommen wird, dass  
+\begin{equation*}
+|\text{j}(r)| := \text{j} = \frac{n\text{I}}{\Delta\text{R}\cdot\text{b}} \text{ für } \text{R}<r<\text{R}+\Delta\text{R} \text{ und } -\text{b}/2<w<\text{b}/2
+\end{equation*} homogen über die Spule verteilt ist. Außerhalb der Spule gilt dann j $= 0$.
+Nach ein paar Umformungen erhält man ein Integral, welches relativ einfach numerisch mit der Programmiersprache Python berechnet werden kann:
+\begin{align}
+\textbf{B}(\textbf{r}) = \frac{\mu_0\text{j}}{4\pi}\int_{-b/2}^{b/2}dw\int_{0}^{2\pi}d\phi\int_{R}^{R+\Delta R}dr \cdot r \frac{\begin{pmatrix}
+\cos(\phi)\cdot (z-w) \\
+\sin(\phi)\cdot (z-w) \\
+r-(y\sin(\phi)+x\cos(\phi))
+\end{pmatrix}}{\sqrt{(x-r\cos(\phi))^2+(y-r\sin(\phi))^2+(z-w)^2}^3}
+\end{align}
+Die frei wählbaren Konstanten in unserer Formel sind R:="`Spuleninnenradius"', $\Delta$R:="`radiale Spulendicke"' und b:="`Spulenbreite"'.
+Für die Simulation, sowie die Berechnung des Feldes der Spulen, welche wir im Versuch benutzen, kann die Formel aufgrund des Superpositionsprinzips im Koordinatensystem gedreht und verschoben und überlagert werden. Der technische Strom fließt bzgl. der z-Achse im mathematisch positiven Sinn bzw. die Elektronen in der Spule fließen im Urzeigersinn. Die Spule liegt dabei in der x-y-Ebene mit dem Schwerpunkt im Ursprung.
+\subsection{Strom durch die Spule}
+Um abschätzen zu können, wie viel Strom wir durch die Spule schicken können, soll eine Temperaturkurve aufgenommen und mit einer Exponentialfunktion gefittet werden, um eine obere Schranke für die Temperatur der Spule bei Dauerbetrieb festzustellen. Die Begründung für einen Exponentialfit findet man unter den folgenden Annahmen:
+\begin{enumerate}
+\item Das Volumen V der Spule ist konstant
+\item Die Raumtemperatur T$_\text{R}$ ist konstant
+\item Der Widerstand R der Spule steigt linear mit der Spulentemperatur T
+\item Die Abkühlung der Spule erfolgt mit dem Newtonschon Abkühlunsgesetz
+\item Eine Konstantstromquelle liefert den Strom I
+\end{enumerate}
+Die den Prozess beschreibende Differentialgleichung folgt aus den folgenden Überlegungen:
+\textbf{Erwärmung der Spule}:\\
+Aus der Thermodynamik wird die Formel für die Änderung der inneren Energie E der Spule verwendet und mit der elektrischen Energie, welche von der Spule absorbiert wird, gleichgesetzt. C entspricht der Wärmekapazität der Spule.
+\begin{align}
+dE|_V = dQ = \frac{dQ}{dT^{(1)}}dT^{(1)} = \text{C}dT^{(1)}\\
+dE|_V = \text{P}dt = \text{R}\text{I}^2dt
+\end{align}
+Daraus Folgt für die Erwärmung dT$^{(1)}$ der Spule in Abhängigkeit der Zeit:
+\begin{align}
+dT^{(1)} = \frac{1}{C}(a\text{T}+b)\text{I}^2 dt
+\end{align}
+wobei $\text{R}:= a\text{T}+b$ nach Voraussetzung eingesetzt wurde.\\
+\textbf{Abkühlung der Spule}:\\
+Für die Wärmeemission dT$^{(2)}$ der Spule wird das Newtonsche Abkühlunsgesetz verwendet. K ist eine Proportionalitätskonstante.
+\begin{align}
+dT^{(2)} = \text{K}(\text{T}-\text{T}_{\text{R}})dt
+\end{align}
+Die Änderung der Spulentemperatur dT als Summe der Wärmeemission und Absorbtion  hat nun die Form:
+\begin{align}
+dT = dT^{(1)}+dT^{(2)} = (A\cdot T+B)dt
+\end{align}
+Wobei A und B sich aus den anderen Konstanten ergeben.
+Dies ist eine lineare inhomogene DGL 1. Ordnung, welche von einer Exponentialfunktion ( $\text{T}(t)=\text{C}\cdot \exp(\text{A}t)-\text{B}$ ) gelöst wird.
+\end{document}

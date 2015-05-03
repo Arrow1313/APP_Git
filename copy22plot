@@ -1,0 +1,38 @@
+set yrange[0:75]
+set xrange[0:4500]
+
+#set xlabel "1/U_A^{1/2}/(1/V^{1/2})" #achsenbeschriftung
+#set ylabel "Druchmesser/m"
+
+#set mxtics 5 #nicht beschriftete striche an den achsen
+#set mytics 5
+#set ytics 1 #beschriftete striche an den achsen
+#set xtics 1
+
+#set key left top #position der legende
+
+#set style fill solid border 3 #fillstyle für z.b. ein histogramm
+#binwidth=0.08 #breite der bins beim histogramm
+#set boxwidth 0.5*binwidth absolute #breite der säulen im vergleich zu den bins
+#bin(x,width)=width*floor(x/width) + binwidth/2.0 #funktion für bins
+#plot "Beispiel.dat" u (bin($1,binwidth)):(1.0) notitle smooth freq with boxes #histogramm plotten
+
+#set grid y #horizontales gitter
+#set grid x #vertikales gitter
+
+#set sample 10000 #bessere auflösung
+a= -94.2207 
+b= 0.000961416  
+c= 63.5583
+f(x) = a*exp(b*x)+c #funktionen definieren
+fit f(x) "copy22.txt" using 1:2 via a,b,c #funktionen fitten
+plot "copy22.txt" title "exponentialplot", f(x) title "Regressionsgerade"#plotten von messdaten, regression, und csplines
+
+set terminal postscript eps enhanced color font 'Helvetica,14' #ausgabeformat
+set output "exponentialplot.eps" #name des dokuments
+replot #dokument plotten
+!epstopdf exponentialplot.eps #eps in pdf umwandeln
+
+
+#A(x) = 2*(0.5+atan(x)/pi) #eingeschränkte funktion
+#f(x) = A(a)*cos(x)+c #amplitude beschränken
