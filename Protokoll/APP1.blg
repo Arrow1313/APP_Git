@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: APP1.aux
+The style file: abbrvdin.bst
+Database file #1: literatur.bib
+Warning--entry type for "hemmert" isn't style-file defined
+--line 1 of file literatur.bib
+Warning--entry type for "hall" isn't style-file defined
+--line 20 of file literatur.bib
+Warning--entry type for "leybold" isn't style-file defined
+--line 39 of file literatur.bib
+Warning--entry type for "kind" isn't style-file defined
+--line 59 of file literatur.bib
+Warning--to sort, need author or key in hall
+Warning--to sort, need author or key in leybold
+(There were 6 warnings)

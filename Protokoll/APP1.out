@@ -1,0 +1,23 @@
+\BOOKMARK [1][-]{section.1}{Motivation und Ziel}{}% 1
+\BOOKMARK [1][-]{section.2}{Theorie}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Magnetfeld eines Helmholtzspulenpaars}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Erw\344rmung der Spule bei hohen Str\366men}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Hallsonden und Hallspannung}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Versuchsaufbau}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Materialliste und Parameter}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Aufbau}{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Vorversuche}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Absch\344tzung der Temperaturentwicklung der Spulen}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Kalibration der Sensoren und Erdmagnetfeld}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Verst\344rkung der Hallspannung}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Durchf\374hrung und Auswertung}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Versuchsdurchf\374hrung}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Resultate und Diskussion der Unsicherheiten}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Fazit und Evaluation}{}% 16
+\BOOKMARK [2][-]{subsection.6.1}{Zusammenfassung der Ergebnisse}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.2}{Bewertung: Haben wir unser Ziel erreicht?}{section.6}% 18
+\BOOKMARK [1][-]{section.7}{Anhang}{}% 19
+\BOOKMARK [2][-]{subsection.7.1}{Python-Programm zur numerischen Berechnung des Spulenmagnetfeldes}{section.7}% 20
+\BOOKMARK [2][-]{subsection.7.2}{Abbildungen}{section.7}% 21
+\BOOKMARK [2][-]{subsection.7.3}{Zus\344tzliche Formeln}{section.7}% 22
+\BOOKMARK [1][-]{equation.7.10}{Literatur}{}% 23

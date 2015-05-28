@@ -1,0 +1,31 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\begin{document}
+\subsection{Korrektur der Kalibrierung}
+Der geklebte Hallsensor wurde kalibriert, indem jede der Komponenten während der Kalibrierung in Richtung des B-Feldes der Spulen gehalten wurde.
+Dafür wurde die Plexiglashalterung mit den Lasern wie bei den Messungen in Richtung des B-Feldes ausgerichtet. Die größte Fehlerquelle bei dieser Kalibrierungsvariante ist die Winkeldifferenz zwischen der Plexiglashalterung und den Hallsonden, da diese mit Heißkleber angeklebt wurden. Experimetell kann man den Winkel einer Sonde zu der Ebene, in der sie eigentlich liegen sollte nur bestimmen, in dem man den Winkel der Hallsonde zu den beiden Achsen dieser Ebene ausmisst.
+Wir betrachten im folgenden ein rechtshändiges Koordinatensystem bezüglich einer orthonormalen Basis, dessen Achsen als x-,y- und z-Achse  bezeichnet werden. O.B.d.A sei die Ebene, in der die Hallsonde eigentlich liegen sollte die xy-Ebene. Der Winkel der Hallsondenebene zur x-Achse sei $\alpha$, und der Winkel zur y-Achse sei $\beta$. Für den Winkel $\gamma$ der Ebene der Hallsonde zur xy-Ebene ergibt sich aus $\alpha$ und $\beta$ :
+\begin{align*}
+\gamma = cos^{-1}\left(\frac{1}{\sqrt{sin^2(\alpha)+sin^2(\beta)+1}}\right)
+\end{align*}
+Der Sensor wurde trotz des Winkels $\gamma$ zum B-Feld, welches bei der Kalibrierung angelegen hat, in der Weise kalibriert, dass das wirkliche B-Feld zu diesem Zeitpunkt, welches in Richtung der Normalen der xy-Ebene zeigte, gemessen wird. Das heißt, dieser Sensor wird in Richtung der eigenen Normalen ein um einen Faktor $\frac{1}{cos(\gamma)}$ größeres B-Feld messen. Das gleiche gilt für die anderen beiden Sensoren. Man kann nun aus diesen zwei Winkeln pro Hallsonde, solange die drei Normalen der Hallsondenebenen linear unabhängig bleiben, das eigentliche B-Feld in Richtung der Koordinatenachsen angeben. Man findet nach geometrischen überlegungen jeweils einen Ausdruck für die achsialen Komponenten $B_x$, $B_y$ und $B_z$ in Abhängigkeit der Winkel, welche noch von den anderen B-Feld-Komponenten abhängen.
+\begin{align*}
+B_z = B_3-\frac{sin(\alpha_3)B_x+sin(\beta_3)B_y}{cos(\gamma_3)}
+\end{align*}
+Wobei der Index 3 für den dritten Hallsensor, dessen Normale die größte z-Komponente hat, steht.\footnote{Index 1 bzw. 2 steht für den Hallsensor mit größter x- bzw. y-Komponente}
+Analoge Ausdrücke folgen für die anderen beiden Komponenten. Dieses lineare Gleichungssystem besteht aus drei Unbekannten und drei unabhängigen Beziehungen. Man kann es z.B. mit dem Gauß-Algorithmus oder der Cramerschen Regel lösen. Für unsere Korrektur vernachlässigen wir Terme der Art $sin(a)\cdot sin(b)$, da alle unsere Winkel kleiner als \SI{3}{\degree} sind. 
+\begin{align*}
+B_x = B_1 -\frac{sin(\alpha_1)}{cos(\gamma_1)}B_2 - \frac{sin(\beta_1)}{cos(\gamma_1)}B_3\\
+B_y = B_2 -\frac{sin(\alpha_2)}{cos(\gamma_2)}B_3 - \frac{sin(\beta_2)}{cos(\gamma_2)}B_1\\
+B_z = B_3 -\frac{sin(\alpha_3)}{cos(\gamma_3)}B_1 - \frac{sin(\beta_3)}{cos(\gamma_3)}B_2
+\end{align*}
+Da die Korrekturen in den meisten Fällen klein gegen die gemessenen B-Felder sein werden, können sie auch als Fehlerabschätzung verwendet werden.
+\end{document}

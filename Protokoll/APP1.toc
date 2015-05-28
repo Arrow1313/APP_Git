@@ -1,0 +1,31 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Motivation und Ziel}{2}{section.1}
+\contentsline {section}{\numberline {2}Theorie}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Magnetfeld eines Helmholtzspulenpaars}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Erw\IeC {\"a}rmung der Spule bei hohen Str\IeC {\"o}men}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Hallsonden und Hallspannung}{4}{subsection.2.3}
+\contentsline {section}{\numberline {3}Versuchsaufbau}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Materialliste und Parameter}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Aufbau}{6}{subsection.3.2}
+\contentsline {section}{\numberline {4}Vorversuche}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Absch\IeC {\"a}tzung der Temperaturentwicklung der Spulen}{8}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Kalibration der Sensoren und Erdmagnetfeld}{9}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Erdmagnetfeld}{9}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Bestimmung des Proportionalit\IeC {\"a}tsfaktors zwischen $B$ und $U_H$ und Berechnung des Magnetfeldes aus der Hallspannung CASSY UNGENAU}{10}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Konzept einer Korrektur der Kalibrierung}{12}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Verst\IeC {\"a}rkung der Hallspannung}{13}{subsection.4.3}
+\contentsline {section}{\numberline {5}Durchf\IeC {\"u}hrung und Auswertung}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Versuchsdurchf\IeC {\"u}hrung}{14}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Resultate und Diskussion der Unsicherheiten}{16}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {5.2.1}Unsicherheit in der Positionsbestimmung}{16}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2}Qualitatives Ergebnis}{16}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.3}Quantitatives Ergebnis}{19}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.4}\IeC {\"A}nderung des Spulenabstands}{23}{subsubsection.5.2.4}
+\contentsline {section}{\numberline {6}Fazit und Evaluation}{24}{section.6}
+\contentsline {subsection}{\numberline {6.1}Zusammenfassung der Ergebnisse}{24}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Bewertung: Haben wir unser Ziel erreicht?}{24}{subsection.6.2}
+\contentsline {section}{\numberline {7}Anhang}{25}{section.7}
+\contentsline {subsection}{\numberline {7.1}Python-Programm zur numerischen Berechnung des Spulenmagnetfeldes}{25}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Abbildungen}{27}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Zus\IeC {\"a}tzliche Formeln}{34}{subsection.7.3}
+\contentsline {section}{Literatur}{35}{equation.7.10}
