@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\begin{document}
+% \frame{\tableofcontents[currentsection]}
+ \section{Theorie zum Faraday Effekt}
+In jedem nichtleitenden transparenten Medium existieren auf atomarer Ebene mikroskopische magnetische Momente $\vec{\mu}$. Klassisch motiviert man dies durch den Atomkern umkreisende Elektronen. Quantenmechanisch kann dies durch den Gesamtdrehimpuls $\vec{\textbf{J}}$ ausgedrückt werden. In einem eingeschalteten Magnetfeld werden diese Momente $\vec{\mu}$ aufgrund der Kreiselgleichung
+\begin{align}
+\dot{\vec{\mu}} = \gamma\cdot\vec{\mu}\times\vec{\textbf{B}}
+\label{Kreiselgleichung}
+\end{align}
+um $\vec{\textbf{B}}$ präzedieren. Mit dem gyromagnetischen Verhältnis $\gamma = g\frac{q}{2m}$, wobei $g$ der Lande-Faktor ist.
+Aus dieser Gleichung ergibt sich klassisch sowie quantenmechanisch sofort die Larmor-Frequenz $\omega_L = g\frac{q}{2m}$, mit der der zum \textbf{B}-Feld senkrechte Teil von $\vec{\mu}$ um $\vec{\textbf{B}}$ präzediert. Man stellt fest, dass die Larmorfrequenz der aus dem Zeeman-Effekt bekannten Energieaufspaltung entspricht: 
+\begin{align}
+\omega_L = \Delta E_{m_J}/ \hbar = g_J\frac{q}{2m}B \qquad (B = |\vec{\textbf{B}}|)
+\label{Larmorfrequenz}
+\end{align}
+Also einem Übergang mit $\Delta m_J = 1$, wobei $m_J$ der Magnetquantenzahl entspricht.\\
+Im Allgemeinen gibt es beim Zeeman Effekt, abhängig von der Stärke des Magnetfeldes, zusätzlich Übergänge mit $\Delta m_J > 1$, sodass die effektive Larmorfrequenz etwas über den klassischen Erwartungen liegen wird, bei denen $g_J=1$ angenommen wird. Der Faraday-Effekt entspricht quantenmechanisch aufgrund der Absorbtion von Lichtquanten also dem inversen Zeeman Effekt.\\
+Der Effekt der Doppelbrechung von linearpolarisiertem Licht, einer elektromagnetischen Transversalwelle (vgl. homogene Maxwellgleichungen), welcher aus Gleichung \ref{Kreiselgleichung} folgt, soll im folgenden klassisch motiviert werden, um die Eigenschaften der Verdet-Konstante abzuleiten (einer Proportionalitätskonstante zwischen Magnetfeldestärke und Drehwinkel).\\
+Die Änderung der Wellenzahl k im Medium beschreibt man mit einem komplexen Brechungsindex $n = n(\omega)$ welcher von der Wellenlänge des Lichtes abhängt. Da uns in diesem Fall nicht die Absobtion des Lichtes interessiert, benötigen wir ausschließlich den Realteil, um den Effekt hinreichend zu beschreiben. $n(\omega)$ sei zusätzlich unabhängig von der Polarisationrichtung des linear Polarisierten Lichtes, sodass in dem vorliegenden Medium ohne Magnetfeld keine Doppelbrechung stattfindet ($n_x = n_y = n$). Mit der Dispersionsrelation im Medium
+\begin{align}
+\omega = k'(\omega)\cdot c = k\cdot n(\omega)\cdot c
+\label{Dispersionsrelation}
+\end{align}
+erhält man die Wellenzahl $k'$ in Abhängigkeit von $\omega = k\cdot c$, der Kreisfrequenz der einlaufenden Lichtwelle.
+Für die Breschreibung dieser elektromagnetischen Welle begibt man sich der Einfachheit halber in die komplexe Ebene, in welcher sie schwingen soll. Eine linear polarisierte Lichtwelle, welche in Richtung der reellen Achse schwingt, (wir betrachten O.B.d.A. nur das \textbf{E}-Feld der Welle) und sich in Richtung $\vec{\textbf{x}}$, der Normalen auf der (komplexen) Ebene, ausbreitet, kann dann dargestellt werden als:
+ \begin{align}
+\textbf{E} = E_0\cdot[e^{i( k'_l x - \omega t)}+e^{-i( k'_r x - \omega t )}] = \textbf{E}_{\text{l}} + \textbf{E}_{\text{r}}
+\label{Lichtwelle_1}
+ \end{align}
+Man sieht sofort, dass es sich um die Überlagerung einer linkszirkularen und einer rechtszirkularen Lichtwelle $\textbf{E}_l$ und $\textbf{E}_r$ mit der Amplitude $E_0$ handelt, woraus sich die Amplitude $2E_0$ für die linear polarisierte Welle \textbf{E} ergibt.\newpage \noindent
+Es wird im Folgenden angenommen, dass die Lichtwelle am Ort $x=0$ senkrecht in das Medium eintritt.  Um zu verstehen, warum bei eingeschaltetem Magnetfeld Doppelbrechung stattfindet, muss man sich in das Bezugssystem der Elektronen begeben, welche, da man $\vec{\textbf{B}}$ in Richtung $\vec{\textbf{x}}$ zeigen lässt, mit den magnetischen Momenten $\vec{\mu}$ um die Ausbreitungsrichtung des Lichtes($ \equiv \vec{\textbf{x}}$) (gegen den Uhrzeigersinn) präzedieren. Aus der Sicht eines Elektrons schwingen zirkular polarisierte elektromagnetischen Wellen also mit einer um $\omega_L$ niedrigeren (rechtszirkular), bzw. um $\omega_L$ höheren Frequenz (linkszirkular). Daher gilt für die Wellenzahl einer linkszirkular polarisierten Lichtwelle $k'_l = k'(\omega + \omega_L)$, und für die Wellenzahl einer rechtszirkular polarisierten Lichtwelle $k'_r = k'(\omega - \omega_L)$, solange das Magnetfeld eingeschaltet ist.\\
+Wenn man dies in Gleichung \ref{Lichtwelle_1} einsetzt, erhält man:
+\begin{align}
+\textbf{E} = E_0\cdot[e^{i(k'(\omega + \omega_L) x - \omega t)}+e^{-i(k'(\omega - \omega_L) x - \omega t)}]
+\label{Lichtwelle_2}
+\end{align}
+Wenn man Annimmt, dass $\omega_L << \omega$ gilt, was in diesem Versuch offensichtlich gilt, kann man $k'$ in Potenzen von $\Delta \omega = \omega_L$
+um $\omega$ entwickeln, und nach dem ersten Glied abbrechen:
+\begin{align*}
+k'_{\pm} := k'(\omega \pm \omega_L) \approx k'(\omega) \pm \frac{\text{d} k'}{\text{d} \omega}(\omega)\cdot\omega_L := k' \pm \frac{\text{d}k'}{\text{d}\omega}\omega_L
+\end{align*}
+Wenn man dies in Gleichung \ref{Lichtwelle_2} einsetzt, erhält man:
+\begin{align}
+\textbf{E} = E_0\cdot[e^{i((k'+ \frac{\text{d} k'}{\text{d} \omega}\omega_L) x - \omega t)}+e^{-i((k' - \frac{\text{d} k'}{\text{d} \omega}\omega_L) x - \omega t)}] = E_0\cdot[e^{i\frac{\text{d} k'}{\text{d} \omega}\omega_L \cdot x}(e^{i(k' x - \omega t)}+e^{-i(k' x - \omega t)})]
+\label{Lichtwelle_3}
+\end{align}
+Man sieht also, dass sich die Polarisationsrichtung der Welle nach einer Strecke $\Delta x$ um den Winkel
+\begin{align}
+\beta = \frac{\text{d} k'}{\text{d} \omega}\omega_L\cdot \Delta x = \frac{\text{d} k'}{\text{d} \omega}\frac{e}{2m_e}B\cdot \Delta x
+\label{Drehwinkel_1}
+\end{align}
+dreht (vgl. Gleichung \ref{Larmorfrequenz} mit $g_J = 1$ und $ q = e $).
+Mit Gleichung \ref{Dispersionsrelation} ergibt sich
+\begin{align}
+\frac{\text{d} k'}{\text{d} \omega} = \frac{2\pi}{\lambda}\cdot\frac{\text{d} n}{\text{d} \omega} = \frac{2\pi}{\lambda}\cdot\frac{\text{d} n}{\text{d} \lambda}\frac{\text{d} \lambda}{\text{d} \omega} = \frac{2\pi}{\lambda}\cdot \frac{\text{d} n}{\text{d} \lambda} \cdot \frac{-\lambda^2}{2\pi c} = -\frac{\lambda}{c} \cdot \frac{\text{d} n}{\text{d} \lambda}
+\end{align}
+was in Gleichung \ref{Drehwinkel_1} eingesetzt, den Drehwinkel
+\begin{align}
+\beta = -\frac{\lambda}{c} \frac{\text{d} n}{\text{d} \lambda}\frac{e}{2m_e}\cdot\Delta x\cdot B = \Delta x \cdot V \cdot B
+\label{Drehwinkel_2}
+\end{align}
+ergibt, wobei $V =  -\frac{\lambda}{c} \frac{\text{d} n}{\text{d} \lambda}\frac{e}{2m_e}$ die Verdetkonstante ist.
+Bei nicht homogenen \textbf{B}-Feld ist es nötig Gleichung \ref{Drehwinkel_2} für $\Delta x \rightarrow 0$ zu betrachten, und über die Länge zu integrieren, sodass sich der allgemeine Drehwinkel als
+\begin{align}
+\beta = V \cdot \int_{l_1}^{l_2} B dx
+\end{align}
+ergibt, wobei in diesem Fall $l_1 = 0$ gewählt wurde, da die Lichtwelle nach Voraussetzung bei $x=0$ in das Medium eintritt.\newpage
+\textbf{Bemerkungen:}
+\begin{enumerate}
+\item
+Aus der Quantenmechanik folgt, dass die Larmorfrequenz bei starkem \textbf{B}-Feld nach oben korrigiert werden muss ($g_J > 1$)
+\item
+Die Verdet-Konstante ist temperaturabhängig ($\frac{\text{d} n}{\text{d} \lambda}(T)$ im Bereich geringer Temperaturschwankungen vernachlässigbar)
+\item
+Der Drehwinkel ist unabhängig von der Ausbreitungsrichtung der Lichtwelle, denn \newline links/rechtszirkular polarisiertes Licht wird bei umkehr der Ausbreitungsrichtung zu\newline rechts/linkszirkular polarisiertem Licht.\newline Formel \ref{Lichtwelle_1} bleibt also unter der Transformation 
+\begin{align}
+\begin{pmatrix}
+k_r \\
+k_l \\
+\omega
+\end{pmatrix} \rightarrow 
+\begin{pmatrix}
+-k_l\\
+-k_r\\
+-\omega
+\end{pmatrix}
+\end{align} invariant. 
+\end{enumerate} 
+
+\footnote{Quellen: \newline http://www.nssp.uni-saarland.de/lehre/FP\_Anleitungen/Anleitung\_Faraday.pdf; \newline https://en.wikipedia.org/wiki/Faraday\_effect; https://en.wikipedia.org/wiki/Zeeman\_effect; \newline https://de.wikipedia.org/wiki/Larmorpräzession}
+\end{document}
