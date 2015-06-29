@@ -30,11 +30,13 @@ Die Änderung der Wellenzahl k im Medium beschreibt man mit einem komplexen Brec
 \label{Dispersionsrelation}
 \end{align}
 erhält man die Wellenzahl $k'$ in Abhängigkeit von $\omega = k\cdot c$, der Kreisfrequenz der einlaufenden Lichtwelle.
-Für die Breschreibung dieser elektromagnetischen Welle begibt man sich der Einfachheit halber in die komplexe Ebene, in welcher sie schwingen soll. Eine linear polarisierte Lichtwelle, welche in Richtung der reellen Achse schwingt, (wir betrachten O.B.d.A. nur das \textbf{E}-Feld der Welle) und sich in Richtung $\vec{\textbf{x}}$, der Normalen auf der (komplexen) Ebene, ausbreitet, kann dann dargestellt werden als:
+Für die Breschreibung dieser elektromagnetischen Welle begibt man sich der Einfachheit halber in die komplexe Ebene, in welcher sie schwingen soll. Eine linear polarisierte Lichtwelle, welche in Richtung der reellen Achse schwingt, (wir betrachten O.B.d.A. nur das \textbf{E}-Feld der Welle) und sich in Richtung $\vec{\textbf{x}}$, der negativen Normalen der (komplexen) Ebene, ausbreitet, kann dann dargestellt werden als
  \begin{align}
 \textbf{E} = E_0\cdot[e^{i( k'_l x - \omega t)}+e^{-i( k'_r x - \omega t )}] = \textbf{E}_{\text{l}} + \textbf{E}_{\text{r}}
 \label{Lichtwelle_1}
  \end{align}
+(wobei das Tupel $(1,i,-\vec{\textbf{x}})$ ein rechtshändiges Koordinatensystem aufspannt).
+% möglicherweise eine Skizze zum rechtshändigen Koordinatensystem und der 
 Man sieht sofort, dass es sich um die Überlagerung einer linkszirkularen und einer rechtszirkularen Lichtwelle $\textbf{E}_l$ und $\textbf{E}_r$ mit der Amplitude $E_0$ handelt, woraus sich die Amplitude $2E_0$ für die linear polarisierte Welle \textbf{E} ergibt.\newpage \noindent
 Es wird im Folgenden angenommen, dass die Lichtwelle am Ort $x=0$ senkrecht in das Medium eintritt.  Um zu verstehen, warum bei eingeschaltetem Magnetfeld Doppelbrechung stattfindet, muss man sich in das Bezugssystem der Elektronen begeben, welche, da man $\vec{\textbf{B}}$ in Richtung $\vec{\textbf{x}}$ zeigen lässt, mit den magnetischen Momenten $\vec{\mu}$ um die Ausbreitungsrichtung des Lichtes($ \equiv \vec{\textbf{x}}$) (gegen den Uhrzeigersinn) präzedieren. Aus der Sicht eines Elektrons schwingen zirkular polarisierte elektromagnetischen Wellen also mit einer um $\omega_L$ niedrigeren (rechtszirkular), bzw. um $\omega_L$ höheren Frequenz (linkszirkular). Daher gilt für die Wellenzahl einer linkszirkular polarisierten Lichtwelle $k'_l = k'(\omega + \omega_L)$, und für die Wellenzahl einer rechtszirkular polarisierten Lichtwelle $k'_r = k'(\omega - \omega_L)$, solange das Magnetfeld eingeschaltet ist.\\
 Wenn man dies in Gleichung \ref{Lichtwelle_1} einsetzt, erhält man:
@@ -66,7 +68,7 @@ was in Gleichung \ref{Drehwinkel_1} eingesetzt, den Drehwinkel
 \begin{align}
 \beta = -\frac{\lambda}{c} \frac{\text{d} n}{\text{d} \lambda}\frac{e}{2m_e}\cdot\Delta x\cdot B = \Delta x \cdot V \cdot B
 \label{Drehwinkel_2}
-\end{align}
+\end{align}Aus der 
 ergibt, wobei $V =  -\frac{\lambda}{c} \frac{\text{d} n}{\text{d} \lambda}\frac{e}{2m_e}$ die Verdetkonstante ist.
 Bei nicht homogenen \textbf{B}-Feld ist es nötig Gleichung \ref{Drehwinkel_2} für $\Delta x \rightarrow 0$ zu betrachten, und über die Länge zu integrieren, sodass sich der allgemeine Drehwinkel als
 \begin{align}
@@ -80,7 +82,7 @@ Aus der Quantenmechanik folgt, dass die Larmorfrequenz bei starkem \textbf{B}-Fe
 \item
 Die Verdet-Konstante ist temperaturabhängig ($\frac{\text{d} n}{\text{d} \lambda}(T)$ im Bereich geringer Temperaturschwankungen vernachlässigbar)
 \item
-Der Drehwinkel ist unabhängig von der Ausbreitungsrichtung der Lichtwelle, denn \newline links/rechtszirkular polarisiertes Licht wird bei umkehr der Ausbreitungsrichtung zu\newline rechts/linkszirkular polarisiertem Licht.\newline Formel \ref{Lichtwelle_1} bleibt also unter der Transformation 
+Der Drehwinkel ist unabhängig von der Ausbreitungsrichtung der Lichtwelle, denn\newline links/rechtszirkular polarisiertes Licht wird bei umkehr der Ausbreitungsrichtung zu\newline rechts/linkszirkular polarisiertem Licht.\newline Formel \ref{Lichtwelle_1} bleibt also unter der Transformation 
 \begin{align}
 \begin{pmatrix}
 k_r \\
