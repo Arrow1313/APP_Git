@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Henrik Jürgens}
+\title{\textbf{Faraday Effekt}\\ weekly report group B}
+\begin{document}
+%\maketitle
+%\frame{\tableofcontents}
+% \frame{\tableofcontents[currentsection]}
+ \section{Theory of the Faraday-Effect}
+\begin{frame} %%Eine Folie
+\subsection{Assumptions}
+\frametitle{\textbf{Theory of the Faraday-Effect:} \\ Assumptions}
+\pause
+\begin{enumerate}
+\item[$\blacktriangleright$]
+There are microscopic magnetic moments in every transparent and nonconductive medium in an atomic scale\newline\newline\pause
+ Classical: Electrons orbiting the nucleus of the atom\newline
+ QM: The total angular momentum $\vec{\textbf{J}}$ of Electrons\newline\pause
+\item[$\blacktriangleright$]
+Linear polarized light is a transverse electromagnetic wave (homogene Maxwell-Equations)
+  
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\subsection{Derivation of the rotation angle $\beta$}
+\frametitle{Derivation of the rotation angle $\beta$}
+\begin{itemize}
+\item[$\blacktriangleright$]
+Gyroscopic equation:
+\begin{align}
+\dot{\vec{\mu}} = \gamma\cdot\vec{\mu}\times\vec{\textbf{B}}
+\label{Kreiselgleichung}
+\end{align}\pause
+$\Rightarrow$ Precession of the magnetical moments:
+\begin{align}
+\omega_L = \Delta E_{m_J}/ \hbar = g\frac{q}{2m}B \qquad (B = |\vec{\textbf{B}}|)
+\label{Larmorfrequenz}
+\end{align}\pause
+$\omega_L \equiv$ precession frequency of $\vec{\mu}$ ('\textbf{Larmor frequency}')
+\newline
+\begin{small}(QM : $\gamma = g\frac{q}{2m}$, $g$ the Lande-Faktor;
+Classically: $g=1$)
+\end{small}\newline\pause
+\item[$\blacktriangleright$]
+Dispersion relation:
+\begin{align}
+\omega = k'(\omega)\cdot c = k\cdot n(\omega)\cdot c
+\label{Dispersionsrelation}
+\end{align}\pause
+\item[$\blacktriangleright$]
+In the complex plane \small{(light is propagating perpendicular to it)}:
+ \begin{align}
+\textbf{E} = E_0\cdot[e^{i( k'_l x - \omega t)}+e^{-i( k'_r x - \omega t )}] = \textbf{E}_{\text{l}} + \textbf{E}_{\text{r}}
+\label{Lichtwelle_1}
+ \end{align}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item[$\blacktriangleright$] \textbf{perspective of the electron}:\newline\pause
+\begin{small}\noindent electons precessing counterclockwise around $\vec{\textbf{B}}$ with the magnetical moments: 
+\end{small}\newline
+$k'_l = k'(\omega + \omega_L)$ for a left-handed circular wave and \newline
+$k'_r = k'(\omega - \omega_L)$ for a right-handed circular wave\newline\pause
+\item[$\blacktriangleright$] Assuming $\omega_L << \omega$
+\begin{align*}
+\Rightarrow k'_{\pm} := k'(\omega \pm \omega_L) \approx k'(\omega) \pm \frac{\text{d} k'}{\text{d} \omega}(\omega)\cdot\omega_L := k' \pm \frac{\text{d}k'}{\text{d}\omega}\omega_L
+\end{align*}\pause
+\item combined with (\ref{Lichtwelle_1}) one obtains:
+\begin{align*}
+\textbf{E} = E_0\cdot[e^{i\frac{\text{d} k'}{\text{d} \omega}\omega_L \cdot x}(e^{i(k' x - \omega t)}+e^{-i(k' x - \omega t)})]\\
+\uncover<5->{\Rightarrow \beta = \frac{\text{d} k'}{\text{d} \omega}\omega_L\cdot \Delta x = \frac{\text{d} k'}{\text{d} \omega}\frac{e}{2m_e}B\cdot \Delta x}
+%\label{Lichtwelle_3}
+%\label{Drehwinkel_1}
+\end{align*}\pause
+\begin{small}($\Delta x \equiv$ length of the interval the light has travelled in the medium\\
+ $g = 1$ und $ q = e $ in (\ref{Larmorfrequenz}) for simplicity)
+\end{small}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item[$\blacktriangleright$] Using the chainrule and the dispersion relation:
+\begin{align}
+\frac{\text{d} k'}{\text{d} \omega} = \frac{2\pi}{\lambda}\cdot\frac{\text{d} n}{\text{d} \lambda}\frac{\text{d} \lambda}{\text{d} \omega} = \frac{2\pi}{\lambda}\cdot \frac{\text{d} n}{\text{d} \lambda} \cdot \frac{-\lambda^2}{2\pi c} = -\frac{\lambda}{c} \cdot \frac{\text{d} n}{\text{d} \lambda}
+\end{align}\pause
+\begin{align}
+\Rightarrow \beta = -\frac{\lambda}{c} \frac{\text{d} n}{\text{d} \lambda}\frac{e}{2m_e}\cdot\Delta x\cdot B = \Delta x \cdot V \cdot B
+\label{Drehwinkel_2}
+\end{align}
+where $V$ is the Verdet constant of the medium\pause
+\item[$\blacktriangleright$] For non homogeneous \textbf{B}-field we let $\Delta x \rightarrow 0$ to get the more general formula for $\beta$
+\begin{align}
+\beta_{l_1\rightarrow l_2} = V \cdot \int_{l_1}^{l_2} B dx
+\end{align}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\subsection{Comments to characteristic features of the Faraday-Effect}
+\frametitle{Comments to characteristic features of the Faraday-Effect}
+\begin{itemize}
+\item[$\blacktriangleright$] With a strong \textbf{B}-Field we know $g > 1$, so the precession frequency will be bigger than the classical Larmor frequency \newline \pause
+\item[$\blacktriangleright$] The Verdet constant dependens on the temperature of the medium ($\frac{\text{d} n}{\text{d} \lambda}(T)$ in the area of small variations negligible) \newline \pause
+\item[$\blacktriangleright$] $\beta$ is independent on the direction of propagation of the light.\newline \newline \pause
+Left/right-handed circular polarized light changes to right/left-handed circular polarized light by changing the direction of propagation and
+you see, that eq. (\ref{Lichtwelle_1}) is invariant under the transformation 
+\begin{align}
+\begin{pmatrix}
+k_r \\
+k_l \\
+\omega
+\end{pmatrix} \rightarrow 
+\begin{pmatrix}
+-k_l\\
+-k_r\\
+-\omega
+\end{pmatrix}
+\end{align}\pause
+As a consequence, we obtain $\beta = \beta'$ \newline(\textbf{the specific difference from the Faraday-Effect to other double refraction phenomena})
+\end{itemize}
+\end{frame}
+\end{document}
